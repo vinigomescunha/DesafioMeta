@@ -1,0 +1,787 @@
+{
+	"info": {
+		"_postman_id": "acfc454f-c0aa-48c7-bd97-ad4e9e8fc886",
+		"name": "Contato",
+		"description": "API para um serviço de gestão de contatos\n\nContact Support:\n Name: Developer Team\n Email: dev.team@devtest.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{id Contato}",
+			"item": [
+				{
+					"name": "Retorna um único objeto do tipo Contato",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "pass",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/:idContato",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								":idContato"
+							],
+							"variable": [
+								{
+									"key": "idContato",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/:idContato",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										":idContato"
+									],
+									"variable": [
+										{
+											"key": "idContato"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"<string>\""
+						},
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/:idContato",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										":idContato"
+									],
+									"variable": [
+										{
+											"key": "idContato"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"nome\": \"<string>\",\n \"canal\": \"<string>\",\n \"valor\": \"<string>\",\n \"id\": \"<string>\",\n \"obs\": \"<string>\"\n}"
+						},
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/:idContato",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										":idContato"
+									],
+									"variable": [
+										{
+											"key": "idContato"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"<string>\""
+						}
+					]
+				},
+				{
+					"name": "Altera um objeto do tipo Contato",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "pass",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"<string>\",\n    \"canal\": \"<string>\",\n    \"valor\": \"<string>\",\n    \"obs\": \"<string>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/:idContato",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								":idContato"
+							],
+							"variable": [
+								{
+									"key": "idContato",
+									"value": "<integer>",
+									"description": "(Required) Identificador único de objetos do tipo Contato"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"<string>\",\n    \"canal\": \"<string>\",\n    \"valor\": \"<string>\",\n    \"obs\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/:idContato",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										":idContato"
+									],
+									"variable": [
+										{
+											"key": "idContato"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"<string>\""
+						},
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"<string>\",\n    \"canal\": \"<string>\",\n    \"valor\": \"<string>\",\n    \"obs\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/:idContato",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										":idContato"
+									],
+									"variable": [
+										{
+											"key": "idContato"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"<string>\""
+						},
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"<string>\",\n    \"canal\": \"<string>\",\n    \"valor\": \"<string>\",\n    \"obs\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/:idContato",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										":idContato"
+									],
+									"variable": [
+										{
+											"key": "idContato"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"<string>\""
+						},
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"<string>\",\n    \"canal\": \"<string>\",\n    \"valor\": \"<string>\",\n    \"obs\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/:idContato",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										":idContato"
+									],
+									"variable": [
+										{
+											"key": "idContato"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"<string>\""
+						}
+					]
+				},
+				{
+					"name": "Apaga um objeto do tipo Contato",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "pass",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/:idContato",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								":idContato"
+							],
+							"variable": [
+								{
+									"key": "idContato",
+									"value": "<integer>",
+									"description": "(Required) Identificador único de objetos do tipo Contato"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/:idContato",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										":idContato"
+									],
+									"variable": [
+										{
+											"key": "idContato"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"<string>\""
+						},
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/:idContato",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										":idContato"
+									],
+									"variable": [
+										{
+											"key": "idContato"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"<string>\""
+						},
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/:idContato",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										":idContato"
+									],
+									"variable": [
+										{
+											"key": "idContato"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"<string>\""
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "(root)",
+			"item": [
+				{
+					"name": "/",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "pass",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/?size=<integer>&page=<integer>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								""
+							],
+							"query": [
+								{
+									"key": "size",
+									"value": "<integer>",
+									"description": "Quantidade de registros a ser retornada em uma única página"
+								},
+								{
+									"key": "page",
+									"value": "<integer>",
+									"description": "Página onde se encontra o subconjunto de registros desejado"
+								}
+							]
+						},
+						"description": "Retorna uma lista de registros de acordo com o informado nos parâmetros page e size. Se estes parâmetros não forem passados na consulta, os seguintes valores padrão serão utilizados: page = 0 e size = 10"
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/?size=<integer>&page=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										""
+									],
+									"query": [
+										{
+											"key": "size",
+											"value": "<integer>"
+										},
+										{
+											"key": "page",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"<string>\""
+						},
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/?size=<integer>&page=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										""
+									],
+									"query": [
+										{
+											"key": "size",
+											"value": "<integer>"
+										},
+										{
+											"key": "page",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n {\n  \"nome\": \"<string>\",\n  \"canal\": \"<string>\",\n  \"valor\": \"<string>\",\n  \"id\": \"<string>\",\n  \"obs\": \"<string>\"\n },\n {\n  \"nome\": \"<string>\",\n  \"canal\": \"<string>\",\n  \"valor\": \"<string>\",\n  \"id\": \"<string>\",\n  \"obs\": \"<string>\"\n }\n]"
+						},
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/?size=<integer>&page=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										""
+									],
+									"query": [
+										{
+											"key": "size",
+											"value": "<integer>"
+										},
+										{
+											"key": "page",
+											"value": "<integer>"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"<string>\""
+						}
+					]
+				},
+				{
+					"name": "Cria um novo objeto do tipo Contato",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "pass",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"John Test\",\n    \"canal\": \"vendas\",\n    \"valor\": \"2\",\n    \"obs\": \"Contato de vendas\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"<string>\",\n    \"canal\": \"<string>\",\n    \"valor\": \"<string>\",\n    \"obs\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"<string>\""
+						},
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"<string>\",\n    \"canal\": \"<string>\",\n    \"valor\": \"<string>\",\n    \"obs\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"<string>\""
+						},
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nome\": \"<string>\",\n    \"canal\": \"<string>\",\n    \"valor\": \"<string>\",\n    \"obs\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "\"<string>\""
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"variable": [
+		{
+			"id": "baseUrl",
+			"key": "baseUrl",
+			"value": "/",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
